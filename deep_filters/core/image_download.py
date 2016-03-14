@@ -8,9 +8,8 @@ fileConfig('logging.conf')
 logger = logging.getLogger('nn')
 
 def download():
-    image_set_path = '/home/robin/fall11_urls.txt'
+    image_set_path = './fall11_urls.txt'
     image_number = 0
-    images = []
     with open(image_set_path, "r") as ins:
 
         for line in ins:
@@ -22,8 +21,7 @@ def download():
                     continue
                 img = Image.open(BytesIO(image_response.read()))
 
-                img.save('/home/robin/PycharmProjects/neural/imgnet/image-{}.png'.format(image_number), 'PNG')
-                images.append('/home/robin/PycharmProjects/neural/imgnet/image-{}.png'.format(image_number))
+                img.save('imgnet/image-{}.png'.format(image_number), 'PNG')
                 image_number += 1
             except:
                 logger.exception("Error")
