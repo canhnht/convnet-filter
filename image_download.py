@@ -8,7 +8,7 @@ fileConfig('logging.conf')
 logger = logging.getLogger('nn')
 
 def download():
-    image_set_path = '/home/robin/fall11_urls.txt'
+    image_set_path = './fall11_urls.txt'
     image_number = 0
     with open(image_set_path, "r") as ins:
 
