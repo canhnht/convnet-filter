@@ -1,0 +1,22 @@
+[global]
+floatX = float32
+device = gpu
+root=/usr/local/cuda-7.5
+
+mode = FAST_RUN
+assert_no_cpu_op = raise
+allow_gc = False
+
+[nvcc]
+fastmath = True
+optimizer_including=conv_dnn
+#optimizer_excluding=conv_dnn
+
+#[lib]
+#cnmem = 0.5
+
+[cuda]
+root=/usr/local/cuda/
+
+[blas]
+ldflags = -lopenblas
