@@ -7,6 +7,8 @@ A convolutional neural network tested and trained in scaling up low-resolution i
 
 This is a trained and tested convolutional neural network based on Keras and Theano. Its purpose is to resolve a bad quality issue when scaling up a small, low-resolution image by big percentage. The network was trained on couple thousand images with approximately 5,000 images per epoch.The image download was also automatized for better efficiency.
 
+More information here: http://build.sh/convolutional-neural-networks-as-an-answer-to-image-scaling-issues/
+
 # Network Architecture
 
 The convolution layer has 150 9 x 9 filters with a 200 x 200 sized images being the input. After that comes the activation layer (RELU) followed by output layer. The used optimizer is Adam on default parameters. 
